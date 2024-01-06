@@ -191,7 +191,7 @@ const ListCert = () => {
                       <TableCell align="center">
                         <IconButton
                           color="secondary"
-                          aria-label="add an alarm"
+                          aria-label="View request"
                           onClick={() => {
                             setShowSelectedRequest(true);
                             setSelectedRequest(row);
@@ -223,7 +223,11 @@ const ListCert = () => {
           />
         </Paper>
       </Box>
-      <RequestDetails open={showSelectedRequest} data={selectedRequest} onClose={() => setShowSelectedRequest(false)} />
+
+      <RequestDetails
+          open={showSelectedRequest}
+          data={selectedRequest}
+          onClose={() => setShowSelectedRequest(false)} />
     </>
   );
 };
