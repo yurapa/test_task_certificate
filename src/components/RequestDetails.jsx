@@ -48,7 +48,7 @@ export default function RequestDetails({ open, onClose, data }) {
       {data.employee_id && <div>Employee id: {data.employee_id}</div>}
       {data.purpose && <div>Purpose: {data.purpose}</div>}
       {data.address_to && <div>Address to: {data.address_to}</div>}
-      {data.issued_on && <div>Issued on: {data.issued_on}</div>}
+      {data.issued_on && data.status.toLowerCase() !== 'done' && <div>Issued on: {data.issued_on}</div>}
       {data.status && <div>Status: {data.status}</div>}
 
       <hr />

@@ -179,8 +179,8 @@ const SortableTable = () => {
             <th onClick={() => handleSort('status')}>
               Status {sortConfig.key === 'status' ? (sortConfig.direction === 'ascending' ? '↑' : '↓') : ''}
             </th>
-            <th>View</th>
             <th>Edit</th>
+            <th>View</th>
           </tr>
         </thead>
         <tbody>
@@ -194,22 +194,22 @@ const SortableTable = () => {
               <td>
                 <IconButton
                   color="secondary"
-                  aria-label="View request"
-                  title="View request"
-                  onClick={() => handleViewRequest(row)}
-                >
-                  <VisibilityIcon />
-                </IconButton>
-              </td>
-              <td>
-                <IconButton
-                  color="secondary"
                   aria-label="Update Purpose"
                   title="Update Purpose"
                   disabled={row.status.toLowerCase() !== 'new'}
                   onClick={() => handleOpenUpdateDialog(row)}
                 >
                   <EditIcon />
+                </IconButton>
+              </td>
+              <td>
+                <IconButton
+                    color="secondary"
+                    aria-label="View request"
+                    title="View request"
+                    onClick={() => handleViewRequest(row)}
+                >
+                  <VisibilityIcon />
                 </IconButton>
               </td>
             </tr>
