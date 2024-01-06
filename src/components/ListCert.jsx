@@ -16,7 +16,7 @@ import { visuallyHidden } from '@mui/utils';
 import IconButton from '@mui/material/IconButton';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 
-import { getComparator, stableSort, apiUrl, apiKey } from '../util/util.js';
+import { getComparator, stableSort, apiUrl, apiKey } from '../utils/utils.js';
 import RequestDetails from './RequestDetails.jsx';
 
 const headCells = [

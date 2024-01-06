@@ -6,7 +6,7 @@ import SendIcon from '@mui/icons-material/Send';
 
 import DateInput from './DateInput.jsx';
 import NumericInput from './NumericInput.jsx';
-import { apiUrl, apiKey } from '../util/util.js';
+import { apiUrl, apiKey } from '../utils/utils.js';
 
 const CreateCert = () => {
   const [tooltipVisible, setTooltipVisible] = useState(false);

@@ -1,7 +1,6 @@
 export const apiUrl = import.meta.env.VITE_API_URL;
 export const apiKey = import.meta.env.VITE_API_KEY;
 
-// export const generateUniq = (str) => str.split('/').join()
 
 export function descendingComparator(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {

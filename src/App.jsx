@@ -7,6 +7,7 @@ import Box from '@mui/material/Box';
 
 import CreateCert from './components/CreateCert.jsx';
 import ListCert from './components/ListCert.jsx';
+import SortableTable from "./components/SortableTable.jsx";
 
 const darkTheme = createTheme({
   palette: {
@@ -42,7 +43,7 @@ function a11yProps(index) {
 }
 
 const App = () => {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(2);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -63,18 +64,21 @@ const App = () => {
           >
             <Tab label="Requests List" {...a11yProps(0)} />
             <Tab label="Create Certificate" {...a11yProps(1)} />
+            <Tab label="Sortable Table" {...a11yProps(2)} />
           </Tabs>
         </Box>
 
         <CustomTabPanel value={value} index={0}>
-          <>
-            <h2>A list of all submitted requests</h2>
             <ListCert />
-          </>
         </CustomTabPanel>
 
         <CustomTabPanel value={value} index={1}>
           <CreateCert />
+        </CustomTabPanel>
+
+        <CustomTabPanel value={value} index={2}>
+          <h1>The list of all submitted requests</h1>
+          <SortableTable />
         </CustomTabPanel>
       </Box>
     </ThemeProvider>
