@@ -21,8 +21,10 @@ h1 {
 }
 
 #root {
-  max-width: 1280px;
-  margin: 100px auto;
+  display: flex;
+  width: 100%;
+  max-width: 1024px;
+  margin: 60px auto;
   padding: 2rem;
   text-align: center;
 }
